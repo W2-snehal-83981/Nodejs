@@ -1,0 +1,57 @@
+http://localhost:3005/users
+
+###
+http://localhost:3005/users/1
+
+###
+POST http://localhost:3005/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "cookie123",
+    "age":40
+}
+
+###
+DELETE http://localhost:3005/users/3 HTTP/1.1
+content-type: application/application/json
+
+{
+    "username": "cookie123",
+    "age":40
+}
+
+
+
+
+
+###
+POST http://localhost:3005/tasks HTTP/1.1
+content-Type: application/json
+{
+    "description": "This is day 1",
+    "completed": true
+}
+
+###
+http://localhost:3005/tasks
+
+###
+http://localhost:3005/tasks/1
+
+###
+POST http://localhost:3005/tasks HTTP/1.1
+content-type: application/json
+
+{
+    "description": "PostgreSQL Task",
+    "completed":true
+}
+
+###
+DELETE http://localhost:3005/tasks/4 HTTP/1.1
+content-type: application/json
+{
+    "description": "PostgreSQL Task",
+    "completed":true
+}
