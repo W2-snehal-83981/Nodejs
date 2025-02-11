@@ -9,12 +9,13 @@ exports.shorthands = undefined;
  * @returns {Promise<void> | void}
  */
 exports.up = (pgm) => {
-    pgm.sql(` create table users(
-        id serial primary key,
-        username varchar(30) not null,
-        password varchar(100) not null
-        );
-        `);
+    pgm.sql(`
+        CREATE TABLE tasks(
+            id SERIAL PRIMARY KEY,
+            description VARCHAR(400) NOT NULL,
+            completed BOOLEAN NOT NULL
+        )
+    `)
 };
 
 /**
@@ -23,5 +24,7 @@ exports.up = (pgm) => {
  * @returns {Promise<void> | void}
  */
 exports.down = (pgm) => {
-    pgm.sql(`drop table users;`);
+    pgm.sql(`
+        DROP TABLE tasks;
+    `)
 };

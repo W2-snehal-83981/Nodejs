@@ -12,8 +12,7 @@ exports.up = (pgm) => {
     pgm.sql(` create table users(
         id serial primary key,
         username varchar(30) not null,
-        password varchar(100) not null
-        );
+        age integer not null);
         `);
 };
 
